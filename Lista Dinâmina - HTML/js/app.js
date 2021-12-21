@@ -3,26 +3,32 @@ function cadastrarElemento() {
   const lista = document.getElementById('lista')
   let item = document.getElementById('item').value
   let msg = document.getElementById('msg')
+  let itens = []
 
-  if(verificarIgual(item)) {
-    // Criando o elemento li e adicionando o texto recebido pelo input, respectivamente, que será inserido na lista
-    let listItem = document.createElement('li')
-    listItem.innerText = item
-    listItem.setAttribute('class', "item-lista")
+  itens = (item.split(','))
+  console.log(itens[0])
 
-    // Inserindo o item na lista
-    lista.appendChild(listItem)
-
-    // Mostrando mensagem confirmando a ação
-    msg.innerText = "Cadastrado com sucesso"
-    msg.classList.add('msg_2')
-    msg.classList.remove('msg_1')
-  }
-  else { 
-    // Mostrando mensagem de erro
-    msg.innerText = "Elemento já cadastrado"
-    msg.classList.remove('msg_2')
-    msg.classList.add('msg_1')
+  for(let i = 0; i < itens.length; i++) {
+    if(verificarIgual(itens[i])) {
+      // Criando o elemento li e adicionando o texto recebido pelo input, respectivamente, que será inserido na lista
+      let listItem = document.createElement('li')
+      listItem.innerText = itens[i]
+      listItem.setAttribute('class', "item-lista")
+  
+      // Inserindo o item na lista
+      lista.appendChild(listItem)
+  
+      // Mostrando mensagem confirmando a ação
+      msg.innerText = "Cadastrado com sucesso"
+      msg.classList.add('msg_2')
+      msg.classList.remove('msg_1')
+    }
+    else { 
+      // Mostrando mensagem de erro
+      msg.innerText = "Elemento já cadastrado"
+      msg.classList.remove('msg_2')
+      msg.classList.add('msg_1')
+    }
   }
 }
 
