@@ -1,0 +1,69 @@
+/* Flexbox 1 */ 
+.parent_1 {
+  height: 150px;  
+  border: 1px solid black;
+  margin: 5px;
+  display: flex;
+}
+
+/* Flexbox 2 */
+.parent_2 {
+  height: 150px;  
+  border: 1px solid black;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flexbox 3 */ 
+.parent_3 {
+  height: 150px;
+  border: 1px solid black;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Flexbox 4 */ 
+.parent_4 {
+  height: 150px;  
+  border: 1px solid black;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Flexbox 5 */
+.parent_5 {
+  height: 150px;  
+  border: 1px solid black;
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Flexbox 6 */
+.parent_6 {
+  height: 150px;  
+  border: 1px solid black;
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* Flexbox 7 */ 
+.parent_7 {
+  height: 150px;  
+  border: 1px solid black;
+  margin: 5px;
+  display: flex;
+}
+
+/* Flexbox 8 */ 
+.parent_8 {
+  height: 150px;  
+  border: 1px solid black;
+  margin: 5px;
+  display: flex;
+}

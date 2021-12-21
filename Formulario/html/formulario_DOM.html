@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../img/html.ico" type="image/x-icon">
+    <title>Cadastro de usuario</title>
+    <link rel="stylesheet" href="../css/formulario.css">
+  </head>
+  <body>
+
+    <p>Criando um formulário de cadastro de usuário e pegando os dados inseridos com javascript</p>
+
+    <form action="">
+      <fieldset>
+        <legend>Cadastro</legend>
+
+        <div class="formItens">
+          <label>Nome:</label>
+          <input type="text" class="nome" id="nome" placeholder="Digite seu nome">
+        </div>
+
+        <div class="formItens">
+          <label>Nascimento:</label>
+          <input type="date" id="nascimento">
+        </div>
+
+        <div class="formItens">
+          <label>Sexo:</label>
+
+          <input type="radio" name="sexo" value="Feminino">
+          <label>Feminino</label>
+
+          <input type="radio" name="sexo" value="Masculino">
+          <label>Masculino</label>
+
+          <input type="radio" name="sexo" value="Transgênero">
+          <label>Transgênero</label>
+
+          <input type="radio" name="sexo" value="Pessoa trans">
+          <label>Pessoa trans</label>
+
+          <input type="radio" name="sexo" value="Transfeminino">
+          <label>Transfeminino</label>
+
+          <input type="radio" name="sexo" value="Transmasculino">
+          <label>Transmasculino</label>
+        </div>
+
+        <div class="formItens">
+          <label for="">Email:</label>
+          <input type="email" id="email">
+        </div>
+
+        <div class="formItens">
+          <label>Conhecimentos:</label><br>
+
+          <input type="checkbox" name="ckbConhecimentos" value="HTML">
+          <label for="">HTML</label><br> 
+
+          <input type="checkbox" name="ckbConhecimentos" value="CSS">
+          <label for="">CSS</label><br> 
+
+          <input type="checkbox" name="ckbConhecimentos" value="Javascript">
+          <label for="">Javascript </label><br>
+
+          <input type="checkbox" name="ckbConhecimentos" value="Java">
+          <label for="">Java</label><br>
+
+          <input type="checkbox" name="ckbConhecimentos" value="C#">
+          <label for="">C#</label><br>
+
+          <input type="checkbox" name="ckbConhecimentos" value="C">
+          <label for="">C</label><br>
+
+          <input type="checkbox" name="ckbConhecimentos" value="C++">
+          <label for="">C++</label><br>
+
+          <input type="checkbox" name="ckbConhecimentos" value="Python">
+          <label for="">Python</label><br> 
+        </div>
+
+        <div class="formItens">
+          <select name="estado" id="estados">
+            <option></option>
+            <option value="Acre">Acre</option>
+            <option value="Alagoas">Alagoas</option>
+            <option value="Amapá">Amapá</option>
+            <option value="Amazonas">Amazonas</option>
+            <option value="Bahia">Bahia</option>
+            <option value="Ceará">Ceará</option>
+            <option value="Distrito Federal">Distrito Federal</option>
+            <option value="Espírito Santo">Espírito Santo</option>
+            <option value="Goiás">Goiás</option>
+            <option value="Maranhão">Maranhão</option>
+            <option value="Mato Grosso">Mato Grosso</option>
+            <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+            <option value="Minas Gerais">Minas Gerais</option>
+            <option value="Pará">Pará</option>
+            <option value="Paraíba">Paraíba</option>
+            <option value="Paraná">Paraná</option>
+            <option value="Pernambuco">Pernambuco</option>
+            <option value="Piauí">Piauí</option>
+            <option value="Rio de Janeiro">Rio de Janeiro</option>
+            <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+            <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+            <option value="Rondônia">Rondônia</option>
+            <option value="Roraima">Roraima</option>
+            <option value="Santa Catarina">Santa Catarina</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Sergipe">Sergipe</option>
+            <option value="Tocantins">Tocantins</option>
+          </select>
+        </div>
+
+        <input type="submit" id="enviar" value="Enviar">
+
+      </fieldset>
+    </form>
+    
+    <script src="../js/formulario_DOM.js"></script>
+  </body>
+</html>
