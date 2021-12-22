@@ -36,12 +36,14 @@ function teste(e) {
   let nome = document.getElementById('nome').value
   let nascimento = formatarData(document.getElementById('nascimento'))
 
-  // Pegando o valor do Button Radio aka Radio Button(btn)
+  // Pegando o valor do Button Radio -> Radio Button(rbn)
   let rbn = document.querySelectorAll('input[name="sexo"]')
   let sexo
   rbn.forEach(function(_elemento) {
-    if(_elemento.checked)
+    if(_elemento.checked){
       sexo = _elemento.value
+      break
+    }
   })
 
   // Pegando os valores selecionados do Checkbox(ckb)
