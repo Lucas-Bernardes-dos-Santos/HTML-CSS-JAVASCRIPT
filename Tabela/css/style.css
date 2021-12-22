@@ -1,0 +1,15 @@
+table, thead, td {
+  border: 1px solid black;
+}
+
+table { 
+  margin: 10px;
+}
+
+td {
+  padding: 5px;
+}
+
+caption {
+  margin-bottom: 5px;
+}
