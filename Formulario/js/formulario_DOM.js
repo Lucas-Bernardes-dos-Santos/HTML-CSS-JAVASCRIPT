@@ -40,8 +40,10 @@ function teste(e) {
   let rbn = document.querySelectorAll('input[name="sexo"]')
   let sexo
   rbn.forEach(function(_elemento) {
-    if(_elemento.checked)
+    if(_elemento.checked){
       sexo = _elemento.value
+      break
+    }
   })
 
   // Pegando os valores selecionados do Checkbox(ckb)
