@@ -1,5 +1,22 @@
+main {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#formulario, #tabela {
+  height: 100%;
+  border: 1px solid black;
+}
+
+#tabela {
+  display: flex;
+  justify-content: center;
+}
+
 table, thead, td {
   border: 1px solid black;
+  height: 10px;
 }
 
 table { 

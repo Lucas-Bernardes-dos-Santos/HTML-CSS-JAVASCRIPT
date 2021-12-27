@@ -42,7 +42,6 @@ function teste(e) {
   rbn.forEach(function(_elemento) {
     if(_elemento.checked){
       sexo = _elemento.value
-      break
     }
   })
 
@@ -81,5 +80,6 @@ function mostrarFormulario(_pessoa = new Pessoa()) {
   console.log(`${_pessoa.getSexo()}`)
   console.log(`${_pessoa.getEmail()}`)
   console.log(`${_pessoa.getConhecimentos()}`)
-  console.log(`${_pessoa.getEstado()}`);
+  console.log(`${_pessoa.getEstado()}`)
+  console.log(_pessoa)
 }

@@ -1,8 +1,7 @@
 function cadastrarElemento() {
   // Pegando a lista e o input, respectivamente
-  const lista = document.getElementById('lista')
-  let item = document.getElementById('item').value
-  let msg = document.getElementById('msg')
+  const lista = getElementsList()
+  let item = getInputValue()
   let itens = []
 
   itens = (item.split(','))
@@ -10,24 +9,14 @@ function cadastrarElemento() {
 
   for(let i = 0; i < itens.length; i++) {
     if(verificarIgual(itens[i])) {
-      // Criando o elemento li e adicionando o texto recebido pelo input, respectivamente, que será inserido na lista
-      let listItem = document.createElement('li')
-      listItem.innerText = itens[i]
-      listItem.setAttribute('class', "item-lista")
-  
-      // Inserindo o item na lista
+      let listItem = criarListItem(itens[i])
+
       lista.appendChild(listItem)
   
-      // Mostrando mensagem confirmando a ação
-      msg.innerText = "Cadastrado com sucesso"
-      msg.classList.add('msg_2')
-      msg.classList.remove('msg_1')
+      mostrarMensagemCadastrado()
     }
     else { 
-      // Mostrando mensagem de erro
-      msg.innerText = "Elemento já cadastrado"
-      msg.classList.remove('msg_2')
-      msg.classList.add('msg_1')
+      mostrarMensagemErroCadastrar()
     }
   }
 }
@@ -77,3 +66,40 @@ function inputClick() {
   msg.classList.remove('msg_1')
   msg.classList.remove('msg_2')
 }
+
+//#region Criar Elementos HTML
+function criarListItem(_element) {
+  let listItem = document.createElement('li')
+  listItem.innerText = _element
+  listItem.setAttribute('class', "item-lista")
+  return listItem
+}
+//#endregion
+
+//#region Pegar valores de elementos no HTML
+function getInputValue() {
+  return document.getElementById('item').value
+}
+function getElementsList() {
+  return document.getElementById('lista')
+}
+//#endregion
+
+//#region Mensagens
+function mostrarMensagemCadastrado() {
+  let msg = document.getElementById('msg')
+
+  // Mostrando mensagem confirmando a ação
+  msg.innerText = "Cadastrado com sucesso"
+  msg.classList.add('msg_2')
+  msg.classList.remove('msg_1')
+}
+function mostrarMensagemErroCadastrar() {
+  let msg = document.getElementById('msg')
+
+  // Mostrando mensagem de erro
+  msg.innerText = "Elemento já cadastrado"
+  msg.classList.remove('msg_2')
+  msg.classList.add('msg_1')
+}
+//#endregion
