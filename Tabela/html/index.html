@@ -5,52 +5,81 @@
     <link rel="shortcut icon" href="../img/html.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contexto-menu.css">
     <title>Document</title>
   </head>
   <body>
+
+    <div id="contexto-menu">
+      <div class="item" id="botao-editar">
+        <span>
+          <img src="../img/write.png" width="16px" alt="copiar">
+          <div class="opcao-contexto-menu">
+            Editar
+          </div>
+        </span>
+      </div>
+  
+      <div class="item" id="botao-deletar">
+        <span>
+          <img src="../img/delete.png" width="16px" alt="deletar">
+          <div class="opcao-contexto-menu">
+            Deletar
+          </div>
+        </span>
+      </div>
+    </div>
     
     <main>
 
       <div id="formulario">
 
+        <form action="" id="form_Pessoa">
+          <fieldset>
+            <legend>Cadastro de Pessoa</legend>
+
+            <div class="input_div">
+              <label>Nome:</label>
+              <input type="text" class="nome" id="nome" placeholder="Digite seu nome completo" value="Lucas" required>
+            </div> 
+
+            <div class="input_div">
+              <label>CPF:</label>
+              <input type="text" class="cpf" id="cpf" value="170" required>
+            </div>
+
+            <div class="input_div">
+              <label>Email:</label>
+              <input type="email" class="email" id="email" value="lucas@lucas" required>
+            </div>
+
+            <div id="mensagem-cadastramento" class="mensagem-cadastramento"></div>
+
+            <div class="input_div" id="controles">
+              <input type="button" id="cadastrar" class="input-formulario" value="Cadastrar">
+              <!--<input type="button" id="alterar" class="input-formulario" value="Alterar">-->
+            </div>        
+          </fieldset>
+        </form>
       </div>
 
-      <div id="tabela">
-        <table>
-          <caption>Pessoas</caption>
-    
-          <thead>
-            <tr>
+      <div id="div_tabela">
+        <table id="tabela">
+
+          <thead id="cabecalho">
               <th>Nome</th>
               <th>CPF</th>
               <th>Email</th>
-            </tr>
           </thead>
-    
-          <tbody>
-            <tr>
-              <td>Lucas Bernardes dos Santos</td>
-              <td>170.228.347-09</td>
-              <td>lbeurncaradess@protonmail.com</td>
-            </tr>
-      
-            <tr>
-              <td>Henry Otávio Figueiredo</td>
-              <td>114.892.225-37</td>
-              <td>henryotaviolucasfigueiredo@deere.com</td>
-            </tr>
-      
-            <tr>
-              <td>Betina Joana Daiane da Luz</td>
-              <td>857.235.051-90</td>
-              <td>betinajoanadaianedaluz@aclnet.com.br</td>
-            </tr>
+
+          <tbody id="conteudo">
           </tbody>
+
         </table>
       </div>
 
     </main>
 
-    <script src="../js/app.js"></script>
+    <script src="../js/app.js" type="module"></script>
   </body>
 </html>

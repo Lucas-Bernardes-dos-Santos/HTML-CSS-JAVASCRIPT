@@ -1,0 +1,36 @@
+#contexto-menu {
+  position: fixed;
+  z-index: 10000;
+  width: 150px;
+  background-color: #dd8181;
+  border-radius: 5px;
+  transform: scale(0);
+  transform-origin: top left;
+}
+
+#contexto-menu.ativado {
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+
+#contexto-menu.item{
+  padding:8px 10px;
+}
+
+#contexto-menu .item:hover{
+  background: #e44e4e;
+}
+
+.item {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+span {
+  display: flex;
+}
+
+.opcao-contexto-menu {
+  margin-left: 5px;
+}

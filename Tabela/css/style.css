@@ -4,29 +4,84 @@ main {
   grid-template-columns: 1fr 1fr;
 }
 
-#formulario, #tabela {
+#formulario, #div_tabela {
   height: 100%;
-  border: 1px solid black;
 }
 
-#tabela {
+#div_tabela {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-table, thead, td {
-  border: 1px solid black;
-  height: 10px;
+#formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-table { 
+.input_div {
   margin: 10px;
+}
+
+#controles {
+  display: flex;
+  justify-content: end;
+}
+
+.input-formulario {
+  cursor: pointer;
+  border-style: none;
+  background-color: #ad93ec;
+  padding: 10px 15px;
+}
+
+.input-formulario:hover {
+  transform: scale(1.02);
+  box-shadow: 1px 1px 10px  #080808;
+}
+
+.mensagem-cadastramento {
+  opacity: 0;
+  font-size: small;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cadastro-confirmado {
+  opacity: 1;
+  color: blue;
+}
+
+.cadastro-negado {
+  opacity: 1;
+  color: red;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  opacity: 0;
+  background-color: #829EFF;;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #98E3DB;
+}
+
+tr.pessoa:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 1px 1px 10px  #848884;
 }
 
 td {
   padding: 5px;
-}
-
-caption {
-  margin-bottom: 5px;
 }
