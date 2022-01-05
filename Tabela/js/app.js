@@ -8,6 +8,9 @@ document.getElementById('botao-deletar').onclick = deletar
 window.addEventListener("click",function(){
   document.getElementById("contexto-menu").classList.remove("ativado");
 })
+document.getElementById('nome').onclick = apagarMensagem
+document.getElementById('cpf').onclick = apagarMensagem
+document.getElementById('email').onclick = apagarMensagem
 
 // ===== GLOBAIS =====
 let linhaSelecionada
@@ -95,7 +98,7 @@ function tabelaMenuContexto(event) {
 
   let contextElement = document.getElementById("contexto-menu")
 
-  linhaSelecionada = this // Dados do elemento a onde o event ocorreu, no caso uma linha da tabela
+  linhaSelecionada = this // Dados do elemento a onde o event ocorreu, no caso ele se refere a linha da tabela selecionada
 
   // Pegando a posição do mouse e definindo o local do contexto-menu
   contextElement.style.top = event.clientY + "px"
@@ -131,6 +134,13 @@ function mensagemConfirmarCadastro(_statusCadastro){
     div_mensagem.classList.remove("cadastro-confirmado")
     div_mensagem.classList.add("cadastro-negado")
   }
+}
+
+function apagarMensagem() {
+  let div_mensagem = document.getElementById('mensagem-cadastramento')
+
+  div_mensagem.classList.remove("cadastro-negado")
+  div_mensagem.classList.remove("cadastro-confirmado")
 }
 
 function enviarPessoaFormulario(_linhaPessoaSelecionada) {

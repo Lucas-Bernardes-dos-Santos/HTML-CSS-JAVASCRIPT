@@ -18,13 +18,14 @@
 }
 
 #contexto-menu .item:hover{
-  background: #e44e4e;
+  background: white;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .item {
-  margin-bottom: 5px;
-  margin-top: 5px;
-  margin-left: 5px;
+  margin: 5px;
 }
 
 span {
