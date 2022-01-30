@@ -1,0 +1,205 @@
+main {
+  height: 100vh;
+  width: 100vw;
+
+  display: inline-block;
+
+  position: relative;
+}
+
+.main-2 {
+  height: 100vh;
+  width: 100vw;
+
+  display: inline-block;
+
+  position: relative;
+}
+
+.main-3 {
+  height: 100vh;
+  width: 100vw;
+
+  display: inline-block;
+
+  position: relative;
+
+  border: 1px solid black;
+}
+
+.area__reservada {
+  height: 50vh;
+  width: 50vw;
+}
+
+/* #region section A*/
+.section__A {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; 
+  gap: 5px;
+}
+/* #endregion */
+
+/* #region section B*/
+.section__B {
+  position: absolute;
+  top: 0;
+  left: 50vw;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Coluna 1 - Coluna 2 */
+  grid-template-rows: 1fr 1fr; /* Linha 1 - Linha 2 */
+  row-gap: 5px;
+}
+/* #endregion */
+
+/* #region section C*/
+.section__C {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 5px;
+}
+
+.box-1 {
+  grid-row: 3/4;
+  grid-column: 2/4;
+}
+.box-2 {
+  grid-row: 2/3;
+  grid-column: 1/3;
+}
+.box-3 {
+  grid-row: 1/3;
+  grid-column: 3/4;
+}
+/* #endregion */
+
+/* #region section D*/
+.section__D {
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  ". . box6"
+  "box5 box5 box6"
+  ". box4 box4";
+}
+
+.box-4 {
+  grid-area: box4;
+}
+.box-5 {
+  grid-area: box5;
+}
+.box-6 {
+  grid-area: box6;
+}
+/* #endregion */
+
+/* #region section F*/
+.section__F {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "box7 box8"
+  "box9 box9 ";
+
+  justify-items: start; 
+}
+
+.box-7 {
+  grid-area: box7;
+}
+.box-8 {
+  grid-area: box8;
+}
+.box-9 {
+  grid-area: box9;
+}
+/* #endregion */
+
+/* #region section G*/
+.section__G {
+  position: absolute;
+  top: 0;
+  left: 50vw;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "box7 box8"
+  "box9 box9 ";
+  align-items: center;
+}
+
+.box-7 {
+  grid-area: box7;
+}
+.box-8 {
+  grid-area: box8;
+}
+.box-9 {
+  grid-area: box9;
+}
+/* #endregion */
+
+/* #region section H*/
+.section__H {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "box10 box11"
+  "box12 box12";
+}
+
+.box-10 {
+  grid-area: box10;
+  justify-self: start;
+}
+.box-11 {
+  grid-area: box11;
+  justify-self: center;
+}
+.box-12 {
+  grid-area: box12;
+  justify-self: end;
+}
+/* #endregion */
+
+/* #region section I*/
+.section__I {
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "box13 box14"
+  "box15 box15 ";
+}
+
+.box-13 {
+  grid-area: box13;
+  align-self: start;
+}
+.box-14 {
+  grid-area: box14;
+  align-self: center;
+}
+.box-15 {
+  grid-area: box15;
+  align-self: flex-end;
+}
+/* #endregion */
